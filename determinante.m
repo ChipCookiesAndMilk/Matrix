@@ -1,5 +1,4 @@
 % This program shows how determinant works
-
 function d = determinante(X)
 	idx=1:size(X,1);
 	for k=1:size(X,1)
@@ -10,6 +9,5 @@ function d = determinante(X)
         	idxc = idx(idx~=k);
         	d(k) = ((-1)^(1+k))*X(1,k)*determinante(X(idxf,idxc));
         	d = sum(d);
-    	end
 	end
 end
